@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: gitops-demo-service
 spec:
-  selector:
-    app: gitops-demo
+  type: NodePort
   ports:
   - port: 80
     protocol: TCP
+    nodePort: 30099
     targetPort: 80
+  selector:
+    app: gitops-demo

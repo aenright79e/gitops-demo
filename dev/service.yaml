@@ -6,6 +6,6 @@ spec:
   selector:
     app: gitops-demo
   ports:
-  - port: 8080
+  - port: 80
     protocol: TCP
-    targetPort: 8080
+    targetPort: 80

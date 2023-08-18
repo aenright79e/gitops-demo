@@ -15,6 +15,6 @@ spec:
       containers:
       - name: gitops-demo
 #        image: aenright79e/gitops-demo-app:1.2
-        image: boxboat/hello-world-webapp
+        image: boxboat/hello-world-webapp:latest
         ports:
         - containerPort: 8080

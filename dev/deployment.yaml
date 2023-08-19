@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gitops-demo-depl
+  name: gitops-demo
 spec:
   selector:
     matchLabels:
       app: gitops-demo
-  replicas: 12
+  replicas: 6
   template:
     metadata:
       labels:

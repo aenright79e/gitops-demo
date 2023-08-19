@@ -10,7 +10,7 @@
 #####################################################
 
 # Generate some deployment names
-deplNames=$(shuf -n 5 /usr/share/dict/words)
+deplNames=( $(shuf -n 5 /usr/share/dict/words) )
 for i in ${!deplNames[@]}; do
     echo ${deplNames[$i]}
 done

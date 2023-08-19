@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gitops-demo-deployment
+  name: gitops-demo
 spec:
   selector:
     matchLabels:

@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: gitops-demo
-  replicas: 6
+  replicas: 12
   template:
     metadata:
       labels:

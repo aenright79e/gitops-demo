@@ -36,8 +36,8 @@ echo ""
 echo -e "${YEL}Creating deployments${NCL}"
 echo ""
 for d in ${!deplNames[@]}; do
-	sleep $((300 + RANDOM % 300));
-	kubectl create deployment ${deplNames[$d]} --image=nginx -n ${deplNames[$d]}-ns
+	sleep $((30 + Random % 300 + RANDOM % 300));
+	kubectl create deployment ${deplNames[$d]}-depl --image=nginx --replicas $((1 + RANDOM % 3)) -n ${deplNames[$d]}-ns
 	echo "$(date)"
 	echo ""
 done
@@ -47,7 +47,7 @@ echo ""
 # Delete deployments
 for d in ${!deplNames[@]}; do
         sleep $((60 + RANDOM % 120));
-        kubectl delete deployment ${deplNames[$d]} -n ${deplNames[$d]}-ns
+        kubectl delete deployment ${deplNames[$d]}-depl -n ${deplNames[$d]}-ns
         echo "$(date)"
         echo ""
 done
@@ -65,4 +65,4 @@ kubectl get ns |grep ns
 echo ""
 echo -e "${YEL}Namespace deletion complete${NCL}"
 echo ""
-echo -e "${GRN}Exiting...${NCL}"
+echo -e "${GRN}Exiting...${NCL}

@@ -60,7 +60,7 @@ for n in ${!deplNames[@]}; do
         kubectl delete ns ${deplNames[$n]}-ns
 done
 
-kubectl get ns |grep ns
+#kubectl get ns |grep ns
 
 echo ""
 echo -e "${YEL}Namespace deletion complete${NCL}"
